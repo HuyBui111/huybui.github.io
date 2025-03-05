@@ -3,58 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doanh Nghiệp AI 2025</title>
+    <title>Bùi Quốc Huy - Kinh Doanh Điện Thoại</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="header">
-    <div class="logo">Công Ty AI</div>
+<header>
+    <div class="logo">Bùi Quốc Huy</div>
     <nav>
-        <ul class="nav-links">
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Sản Phẩm</a></li>
-            <li><a href="#">Dịch Vụ</a></li>
-            <li><a href="#">Liên Hệ</a></li>
-        </ul>
+        <a href="#">Trang Chủ</a>
+        <a href="#products">Sản Phẩm</a>
+        <a href="#about">Giới Thiệu</a>
+        <a href="#contact">Liên Hệ</a>
     </nav>
-    <div class="search-bar">
-        <input type="text" placeholder="Tìm kiếm...">
-    </div>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Chào mừng đến với Doanh Nghiệp AI 2025</h1>
-        <p>Giải pháp công nghệ tương lai dành cho bạn</p>
-        <button onclick="showChatbot()">Trò chuyện với AI</button>
+    <h1>Chuyên Cung Cấp Các Sản Phẩm Điện Thoại Chính Hãng</h1>
+    <p>Uy tín - Chất lượng - Giá tốt</p>
+    <button onclick="chatWithAI()">Trò chuyện với AI tư vấn</button>
+</section>
+
+<section id="products">
+    <h2>Sản Phẩm Nổi Bật</h2>
+    <div class="product-list">
+        <div class="product">
+            <img src="images/iphone15.jpg" alt="iPhone 15 Pro Max">
+            <h3>iPhone 15 Pro Max</h3>
+            <p>Giá: 32.000.000đ</p>
+        </div>
+        <div class="product">
+            <img src="images/samsungS24.jpg" alt="Samsung Galaxy S24 Ultra">
+            <h3>Samsung Galaxy S24 Ultra</h3>
+            <p>Giá: 29.000.000đ</p>
+        </div>
     </div>
 </section>
 
-<section class="products">
-    <h2>Sản phẩm nổi bật</h2>
-    <div class="product-list">
-        <div class="product-item">Sản phẩm 1</div>
-        <div class="product-item">Sản phẩm 2</div>
-        <div class="product-item">Sản phẩm 3</div>
-    </div>
+<section id="about">
+    <h2>Giới Thiệu</h2>
+    <p>Tôi là <strong>Bùi Quốc Huy</strong>, chuyên cung cấp các dòng điện thoại chính hãng Apple, Samsung, Xiaomi với giá tốt nhất thị trường.</p>
+</section>
+
+<section id="contact">
+    <h2>Liên Hệ</h2>
+    <p>Hotline: 0988.123.456</p>
+    <p>Email: buiquochuy@gmail.com</p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Công Ty AI - All rights reserved.</p>
+    <p>&copy; 2025 Bùi Quốc Huy. All rights reserved.</p>
 </footer>
 
-<!-- Chatbot AI -->
-<div id="chatbot" class="chatbot hidden">
-    <div class="chat-header">Trợ lý AI</div>
-    <div class="chat-body" id="chat-body"></div>
-    <div class="chat-footer">
-        <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
-        <button onclick="sendMessage()">Gửi</button>
+<!-- Chatbot giả lập (sau có thể kết nối OpenAI hoặc API chatbot khác) -->
+<div id="chatbot">
+    <div class="chat-header">AI Tư Vấn</div>
+    <div class="chat-body" id="chat-body">
+        <p>Xin chào! Tôi có thể giúp gì cho bạn?</p>
     </div>
+    <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChat(event)">
 </div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
