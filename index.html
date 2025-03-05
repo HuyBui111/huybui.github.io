@@ -3,33 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Đơn Giản</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Doanh Nghiệp AI 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với website của tôi</h1>
-    </header>
 
+<header class="header">
+    <div class="logo">Công Ty AI</div>
     <nav>
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Liên hệ</a></li>
+        <ul class="nav-links">
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Dịch Vụ</a></li>
+            <li><a href="#">Liên Hệ</a></li>
         </ul>
     </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+    </div>
+</header>
 
-    <main>
-        <section>
-            <h2>Giới thiệu</h2>
-            <p>Đây là trang web đầu tiên tôi làm bằng Visual Studio Code.</p>
-        </section>
-    </main>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Chào mừng đến với Doanh Nghiệp AI 2025</h1>
+        <p>Giải pháp công nghệ tương lai dành cho bạn</p>
+        <button onclick="showChatbot()">Trò chuyện với AI</button>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Bản quyền thuộc về tôi.</p>
-    </footer>
+<section class="products">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="product-list">
+        <div class="product-item">Sản phẩm 1</div>
+        <div class="product-item">Sản phẩm 2</div>
+        <div class="product-item">Sản phẩm 3</div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <p>&copy; 2025 Công Ty AI - All rights reserved.</p>
+</footer>
+
+<!-- Chatbot AI -->
+<div id="chatbot" class="chatbot hidden">
+    <div class="chat-header">Trợ lý AI</div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
+        <button onclick="sendMessage()">Gửi</button>
+    </div>
+</div>
+
 </body>
 </html>
