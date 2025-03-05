@@ -3,68 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bùi Quốc Huy - Kinh Doanh Điện Thoại</title>
+    <title>BuiQuocHuy Phone Store</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-
-<header>
-    <div class="logo">Bùi Quốc Huy</div>
-    <nav>
-        <a href="#">Trang Chủ</a>
-        <a href="#products">Sản Phẩm</a>
-        <a href="#about">Giới Thiệu</a>
-        <a href="#contact">Liên Hệ</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Chuyên Cung Cấp Các Sản Phẩm Điện Thoại Chính Hãng</h1>
-    <p>Uy tín - Chất lượng - Giá tốt</p>
-    <button onclick="chatWithAI()">Trò chuyện với AI tư vấn</button>
-</section>
-
-<section id="products">
-    <h2>Sản Phẩm Nổi Bật</h2>
-    <div class="product-list">
-        <div class="product">
-            <img src="images/iphone15.jpg" alt="iPhone 15 Pro Max">
-            <h3>iPhone 15 Pro Max</h3>
-            <p>Giá: 32.000.000đ</p>
+    <header>
+        <div class="logo">BuiQuocHuy Phone</div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
         </div>
-        <div class="product">
-            <img src="images/samsungS24.jpg" alt="Samsung Galaxy S24 Ultra">
-            <h3>Samsung Galaxy S24 Ultra</h3>
-            <p>Giá: 29.000.000đ</p>
+    </header>
+
+    <section class="banner">
+        <img src="images/banner.jpg" alt="Banner quảng cáo">
+        <div class="banner-text">
+            <h1>Chào mừng đến BuiQuocHuy Phone</h1>
+            <p>Những sản phẩm mới nhất 2025</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/iphone15.jpg" alt="iPhone 15">
+                <h3>iPhone 15 Pro Max</h3>
+                <p>Giá: 30.000.000đ</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="images/samsungS24.jpg" alt="Samsung S24">
+                <h3>Samsung Galaxy S24 Ultra</h3>
+                <p>Giá: 28.000.000đ</p>
+                <button>Mua ngay</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 BuiQuocHuy Phone Store - Hotline: 0909.xxx.xxx</p>
+    </footer>
+
+    <!-- AI Chat Bot -->
+    <div class="ai-chat">
+        <button class="ai-toggle">🤖 AI Chat</button>
+        <div class="chat-box">
+            <div class="chat-content"></div>
+            <input type="text" id="user-input" placeholder="Nhập câu hỏi...">
+            <button onclick="sendMessage()">Gửi</button>
         </div>
     </div>
-</section>
-
-<section id="about">
-    <h2>Giới Thiệu</h2>
-    <p>Tôi là <strong>Bùi Quốc Huy</strong>, chuyên cung cấp các dòng điện thoại chính hãng Apple, Samsung, Xiaomi với giá tốt nhất thị trường.</p>
-</section>
-
-<section id="contact">
-    <h2>Liên Hệ</h2>
-    <p>Hotline: 0988.123.456</p>
-    <p>Email: buiquochuy@gmail.com</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Bùi Quốc Huy. All rights reserved.</p>
-</footer>
-
-<!-- Chatbot giả lập (sau có thể kết nối OpenAI hoặc API chatbot khác) -->
-<div id="chatbot">
-    <div class="chat-header">AI Tư Vấn</div>
-    <div class="chat-body" id="chat-body">
-        <p>Xin chào! Tôi có thể giúp gì cho bạn?</p>
-    </div>
-    <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChat(event)">
-</div>
-
-<script src="js/script.js"></script>
-
 </body>
 </html>
