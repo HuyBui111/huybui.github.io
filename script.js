@@ -1,22 +1,26 @@
 document.querySelector('.ai-toggle').addEventListener('click', () => {
     document.querySelector('.chat-box').classList.toggle('show');
-    document.querySelector('.chat-box').style.display = 
-        document.querySelector('.chat-box').classList.contains('show') ? 'block' : 'none';
 });
 
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     const chatContent = document.querySelector('.chat-content');
-    if (userInput.trim() !== "") {
-        const userMessage = `<div><b>Bạn:</b> ${userInput}</div>`;
-        chatContent.innerHTML += userMessage;
 
-        // Giả lập phản hồi AI
-        setTimeout(() => {
-            const aiReply = `<div><b>AI:</b> Xin chào! Đây là phản hồi tự động.</div>`;
-            chatContent.innerHTML += aiReply;
-        }, 1000);
+    const userMessage = `<div><b>Bạn:</b> ${userInput}</div>`;
+    chatContent.innerHTML += userMessage;
 
-        document.getElementById('user-input').value = '';
+    let botReply = '';
+
+    if (userInput.toLowerCase().includes('giá iphone')) {
+        botReply = 'Giá iPhone 15 Pro Max hiện tại là 30 triệu đồng.';
+    } else if (userInput.toLowerCase().includes('cửa hàng ở đâu')) {
+        botReply = 'Cửa hàng hiện đang hoạt động online, giao hàng toàn quốc.';
+    } else {
+        botReply = 'Xin lỗi, tôi chưa hiểu câu hỏi này.';
     }
+
+    const botMessage = `<div><b>AI:</b> ${botReply}</div>`;
+    chatContent.innerHTML += botMessage;
+
+    document.getElementById('user-input').value = '';
 }

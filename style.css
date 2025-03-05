@@ -1,28 +1,16 @@
-/* Reset cơ bản */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f4f4f4;
-}
-
-/* Header */
 header {
-    background: #fff;
-    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 24px;
+    background-color: #0071e3;
+    color: white;
+    padding: 10px 50px;
 }
 
 nav ul {
@@ -32,123 +20,57 @@ nav ul {
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
 
-.search-bar input {
-    padding: 5px;
-}
-
-.search-bar button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Banner */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Sản phẩm */
 .products {
-    padding: 30px;
-    background: #fff;
-}
-
-.products h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.product-list {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+    padding: 20px;
 }
 
 .product-item {
-    background: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
+    display: inline-block;
     width: 200px;
+    margin: 10px;
+    text-align: center;
 }
 
 .product-item img {
     width: 100%;
-    height: auto;
 }
 
-.product-item h3 {
-    margin: 10px 0;
-}
-
-.product-item button {
-    padding: 5px 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #333;
-    color: white;
+    background: #f1f1f1;
+    padding: 10px;
 }
 
-/* AI Chat */
 .ai-chat {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
 }
 
 .chat-box {
     display: none;
-    width: 300px;
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
     padding: 10px;
-    position: relative;
+    background: white;
 }
 
-.chat-box input {
-    width: calc(100% - 60px);
-    padding: 5px;
+.chat-content {
+    height: 100px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
-.chat-box button {
-    padding: 5px;
-    cursor: pointer;
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 
-.ai-toggle {
-    padding: 10px;
-    cursor: pointer;
+.about {
+    text-align: center;
+    padding: 50px;
 }
